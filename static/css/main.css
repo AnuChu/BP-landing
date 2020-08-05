@@ -1,0 +1,544 @@
+@import "normalize.css";
+
+:root{
+    --fon: black;
+    --text: white;
+
+    --fon2: #EFACBE;
+    --text2: black;
+
+    --text-size-title-main: calc(100vw - 96vw);
+    --text-size-title: calc(100vw - 96vw);
+    --text-size-title-content: calc(100vw - 98.5vw);
+    --text-size-content: calc(100vw - 98.5vw);
+    --text-size-content-info: calc(100vw - 98.5vw);
+    --text-sixe-icon: calc(100vw - 99vw);
+    --text-size-content-footer: calc(100vw - 98.5vw);
+    --text-size-title-content-footer: calc(100vw - 98.5vw);
+    --text-size-menu: calc(100vw - 98.5vw);
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica;
+}
+
+.container{
+    margin: 0 8% 0 8%;
+}
+@media (max-device-width: 800px) {
+    .container {
+        margin: 0;
+    }
+
+    :root {
+        --text-size-title: calc(100vw - 92vw);
+        --text-size-title-content: calc(100vw - 92.5vw);
+        --text-size-content: calc(100vw - 93vw);
+        --text-sixe-icon: calc(100vw - 96.5vw);
+        --text-size-content-info: calc(100vw - 93vw);
+        --text-size-content-footer: calc(100vw - 94.5vw);
+        --text-size-title-content-footer: calc(100vw - 94vw);
+        --text-size-menu: calc(100vw - 97vw);
+    }
+
+    .concert-block {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .album-block {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+
+    .about-block {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .footer-block {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .footer-block2{
+        text-align: center!important;
+        margin-top: 2%;
+    }
+    .menu-point{
+        line-height: 20px!important;
+    }
+    .nav {
+        width: calc(100vw - 80vw)!important;
+        min-width: calc(100vw - 80vw)!important;
+    }
+    .nav-toggle{
+        top: calc(0.01vh)!important;
+        right: calc(30vw)!important;
+    }
+
+}
+
+
+/* ---main--- */
+
+.main{
+    display: flex;
+    background-color: var(--fon);
+    color: var(--text);
+    height: 100vh;
+    /*for img-background*/
+    /*background: url('');*/
+    /*background-size: cover;*/
+}
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+.main-content_title{
+    font-weight: bold;
+    font-size: calc(100vw - 88vw);
+}
+.main-content_title:after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 15px 0 15px 0;
+    background-color: var(--text);
+}
+
+.main-content_subtitle {
+    font-weight: bold;
+    font-size: calc(100vw - 80vw);
+}
+.main-content_concert{
+    display: flex;
+    flex: 1;
+    margin-top: 5px;
+}
+.main-content_text{
+    font-weight: lighter;
+    font-size: var(--text-size-title);
+}
+/* ---concert--- */
+
+.concert{
+    background: var(--fon);
+    color: var(--text);
+    padding-bottom: 20px;
+}
+.concert-content{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.concert-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: var(--text-size-title);
+    padding-bottom: 30px;
+}
+.concert-title img {
+    width: 100%;
+    height: 50%;
+    border-color: var(--text);
+    border-radius: 10px;
+}
+.concert-block{
+    display: flex;
+    margin: 20px 20px 0 20px;
+}
+.concert-block1{
+    flex-basis: 70%;
+    padding-right: 10px;
+}
+.concert-block2{
+    flex-basis: 30%;
+    border-left: 2px solid var(--text);
+}
+.concert-text-title{
+    font-weight: bold;
+    font-size: var(--text-size-title-content);
+}
+.concert-text-subtitle{
+    font-weight: lighter;
+    font-size: var(--text-size-content);
+}
+.concert-text-subtitle2{
+    margin: 20px;
+    font-weight: lighter;
+    font-size: var(--text-size-content-info);
+}
+
+/* ---buy--- */
+
+.buy{
+    color: var(--text);
+    background-color: var(--fon);
+}
+
+.buy-block{
+    background: rgba(196, 196, 196, 0.2);
+    backdrop-filter: blur(40px);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 20px 10% 20px 10%;
+    font-size: var(--text-sixe-icon);
+}
+.buy-block1{
+    flex-basis: 33%;
+}
+.buy-block1 img {
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+}
+.buy-block2{
+    flex-basis: 33%;
+}
+.buy-block2 img {
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+}
+.buy-block3{
+    flex-basis: 33%;
+}
+.buy-block3 img {
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+/* ---album--- */
+
+.album{
+    background: var(--fon);
+    color: var(--text);
+}
+.album-content{
+    padding: 30px 10% 0 10%;
+}
+.album-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: var(--text-size-title);
+    padding-bottom: 30px;
+}
+.album-block{
+    border-top: 1px solid var(--text);
+    padding-top: 25px;
+    display: flex;
+}
+.album-block1{
+    margin: 2%;
+    flex-basis: 55%;
+}
+.album-block2{
+    margin: 2%;
+    flex-basis: 45%;
+}
+
+.album-image img {
+
+    width: 100%;
+    height: auto;
+    border-color: var(--text);
+    border-radius: 10px;
+}
+.album-text-title{
+    font-weight: bold;
+    font-size: var(--text-size-title-content);
+}
+.album-text-subtitle{
+    font-weight: lighter;
+    font-size: var(--text-size-content);
+}
+
+
+/* ---about--- */
+
+.about{
+    background: var(--fon);
+    color: var(--text);
+    padding: 20px 0 20px 0;
+}
+.about-content{
+    padding: 30px 10% 0 10%;
+}
+.about-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: var(--text-size-title);
+    padding-bottom: 30px;
+}
+.about-content:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 20px;
+    background-color: var(--text);
+}
+.about-block{
+    border-top: 1px solid var(--text);
+    padding-top: 25px;
+    display: flex;
+}
+.about-block1{
+    margin: 2%;
+    flex-basis: 55%;
+}
+.about-block2{
+    margin: 2%;
+    flex-basis: 45%;
+}
+.about-image img {
+
+    width: 100%;
+    height: auto;
+    border-color: var(--text);
+    border-radius: 10px;
+}
+.about-text-title{
+    font-weight: bold;
+    font-size: var(--text-size-title-content);
+}
+.about-text-subtitle{
+    font-weight: lighter;
+    font-size: var(--text-size-content);
+}
+
+/* ---footer--- */
+
+.footer{
+    color: var(--text2);
+    background-color: var(--fon2);
+}
+.footer-block{
+    background: rgba(196, 196, 196, 0.2);
+    backdrop-filter: blur(40px);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 20px 10% 20px 10%;
+}
+.footer-block img{
+width: 50%;
+    height: auto;
+}
+.footer-text{
+    font-size: var(--text-size-content-footer);
+}
+.footer-text-title{
+    text-decoration: underline;
+font-size: var(--text-size-title-content-footer);
+}
+
+.footer-block1{
+    text-align: left;
+    flex-basis: 40%;
+}
+.footer-block2{
+    flex-basis: 60%;
+    text-align: right;
+}
+
+/* ---hamburger--- */
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: white;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+.ham1 .top {
+    stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+    stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+    stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+    stroke-dashoffset: -138px;
+}
+
+/* --- menu --- */
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.menu-content{
+ color: var(--text);
+    font-size: var(--text-size-menu);
+}
+.menu-point {
+    line-height: 45px;
+    padding: 50px 5px;
+
+}
+.menu-point a{
+    color: var(--text);
+    text-decoration: none;
+}
+.menu-point a:hover{
+    color: var(--fon2);
+}
+.menu-point li{
+    color: var(--text);
+    list-style-type: none;
+}
+
+/**
+ * Переключаемая боковая панель навигации
+ * выдвигающаяся по клику слева
+ */
+
+.nav {
+    /*  ширна произвольная, не стесняйтесь экспериментировать */
+    width: calc(100vw - 87.5vw);
+    min-width: calc(100vw - 87.5vw);
+    /* фиксируем и выставляем высоту панели на максимум */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    /* сдвигаем (прячем) панель относительно левого края страницы */
+    right: calc(-35vw);
+    /* внутренние отступы */
+    padding: 15px 20px;
+    /* плавный переход смещения панели */
+    -webkit-transition: right 0.3s;
+    -moz-transition: right 0.3s;
+    transition: right 0.3s;
+    /* определяем цвет фона панели */
+    background: rgba(196, 196, 196, 0.2);
+    backdrop-filter: blur(90px);
+    /* поверх других элементов */
+    z-index: 2000;
+}
+
+/**
+ * Кнопка переключения панели
+ * тег <label>
+ */
+
+.nav-toggle {
+    /* абсолютно позиционируем */
+    position: fixed;
+    /* относительно левого края панели */
+    right: calc(35vw);
+    /* отступ от верхнего края панели */
+    top: 1em;
+    /* внутренние отступы */
+    padding: 0.5em;
+    /* определяем цвет фона переключателя
+     * чаще вчего в соответствии с цветом фона панели
+    */
+    background: inherit;
+    /* цвет текста */
+    color: #dadada;
+    /* вид курсора */
+    cursor: pointer;
+    /* размер шрифта */
+    font-size: 1.2em;
+    line-height: 1;
+    /* всегда поверх других элементов страницы */
+    z-index: 2001;
+    /* анимируем цвет текста при наведении */
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+
+/**
+ * Скрытый чекбокс (флажок)
+ * невидим и недоступен :)
+ * имя селектора атрибут флажка
+ */
+
+[id='nav-toggle'] {
+    position: absolute;
+    display: none;
+}
+
+/**
+ * изменение положения переключателя
+ * при просмотре на мобильных устройствах
+ * когда навигация раскрыта, распологаем внутри панели
+*/
+
+[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+    right: auto;
+    left: 2px;
+    top: 1em;
+}
+
+/**
+ * Когда флажок установлен, открывается панель
+ * используем псевдокласс:checked
+ */
+
+[id='nav-toggle']:checked ~ .nav {
+    right: 0;
+    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+}
+/*
+ * смещение контента страницы
+ * на размер ширины панели,
+ * фишка необязательная, на любителя
+*/
+
+[id='nav-toggle']:checked ~ main > article {
+    -webkit-transform: translateX(320px);
+    -moz-transform: translateX(320px);
+    transform: translateX(320px);
+}
+
