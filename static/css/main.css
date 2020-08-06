@@ -82,7 +82,6 @@ html {
     }
     .nav-toggle{
         top: calc(0.01vh)!important;
-        right: calc(30vw)!important;
     }
 
 }
@@ -369,19 +368,17 @@ font-size: var(--text-size-title-content-footer);
 /* ---hamburger--- */
 
 .ham {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    position: fixed;
     user-select: none;
+    right: 1vw;
 }
 .hamRotate.active {
     transform: rotate(45deg);
+    right: 1vw;
 }
 .hamRotate180.active {
     transform: rotate(180deg);
+    right: 1vw;
 }
 .line {
     fill:none;
@@ -390,26 +387,27 @@ font-size: var(--text-size-title-content-footer);
     stroke-width:5.5;
     stroke-linecap:round;
 }
-.ham1 .top {
+.ham .top {
     stroke-dasharray: 40 139;
+    right: 1vw;
 }
-.ham1 .bottom {
+.ham .bottom {
     stroke-dasharray: 40 180;
+    right: 1vw;
 }
-.ham1.active .top {
+.ham.active .top {
     stroke-dashoffset: -98px;
+    right: 1vw;
 }
-.ham1.active .bottom {
+.ham.active .bottom {
     stroke-dashoffset: -138px;
+    right: 1vw;
 }
 
 /* --- menu --- */
 
 .menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
 }
 .menu-content{
  color: var(--text);
@@ -471,30 +469,19 @@ font-size: var(--text-size-title-content-footer);
     /* абсолютно позиционируем */
     position: fixed;
     /* относительно левого края панели */
-    right: calc(35vw);
-    /* отступ от верхнего края панели */
-    top: 1em;
-    /* внутренние отступы */
-    padding: 0.5em;
-    /* определяем цвет фона переключателя
-     * чаще вчего в соответствии с цветом фона панели
-    */
-    background: inherit;
-    /* цвет текста */
-    color: #dadada;
+    right: 35vw;
     /* вид курсора */
     cursor: pointer;
-    /* размер шрифта */
-    font-size: 1.2em;
-    line-height: 1;
     /* всегда поверх других элементов страницы */
     z-index: 2001;
     /* анимируем цвет текста при наведении */
-    -webkit-transition: color .25s ease-in-out;
-    -moz-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out;
 }
-
+@-moz-document url-prefix() {
+    .nav-toggle{
+        right: 1vw;
+    }
+}
 /**
  * Скрытый чекбокс (флажок)
  * невидим и недоступен :)
@@ -502,22 +489,10 @@ font-size: var(--text-size-title-content-footer);
  */
 
 [id='nav-toggle'] {
+    right: 1vw;
     position: absolute;
     display: none;
 }
-
-/**
- * изменение положения переключателя
- * при просмотре на мобильных устройствах
- * когда навигация раскрыта, распологаем внутри панели
-*/
-
-[id='nav-toggle']:checked ~ .nav > .nav-toggle {
-    right: auto;
-    left: 2px;
-    top: 1em;
-}
-
 /**
  * Когда флажок установлен, открывается панель
  * используем псевдокласс:checked
@@ -528,17 +503,6 @@ font-size: var(--text-size-title-content-footer);
     box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
     -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
     -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    overflow-y: auto;
-}
-/*
- * смещение контента страницы
- * на размер ширины панели,
- * фишка необязательная, на любителя
-*/
 
-[id='nav-toggle']:checked ~ main > article {
-    -webkit-transform: translateX(320px);
-    -moz-transform: translateX(320px);
-    transform: translateX(320px);
 }
 
