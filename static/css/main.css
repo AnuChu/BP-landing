@@ -20,7 +20,6 @@
 ::-webkit-scrollbar {
     width: 0;
 }
-
 html {
     scroll-behavior: smooth;
     font-family: Helvetica;
@@ -38,7 +37,7 @@ html {
         --text-size-title: calc(100vw - 92vw);
         --text-size-title-content: calc(100vw - 92.5vw);
         --text-size-content: calc(100vw - 93vw);
-        --text-sixe-icon: calc(100vw - 96.5vw);
+        --text-sixe-icon: calc(100vw - 96vw);
         --text-size-content-info: calc(100vw - 93vw);
         --text-size-content-footer: calc(100vw - 94.5vw);
         --text-size-title-content-footer: calc(100vw - 94vw);
@@ -211,6 +210,15 @@ html {
     padding: 20px 10% 20px 10%;
     font-size: var(--text-sixe-icon);
 }
+.buy-block a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.buy-block img{
+    height: 100%;
+    width: auto;
+}
 
 .buy-block1{
     flex-basis: 33%;
@@ -325,7 +333,6 @@ html {
     flex-basis: 45%;
 }
 .about-image img {
-
     width: 100%;
     height: auto;
     border-color: var(--text);
@@ -363,7 +370,7 @@ width: 50%;
     font-size: var(--text-size-content-footer);
 }
 .footer-text-title{
-    text-decoration: underline;
+    font-weight: bold;
 font-size: var(--text-size-title-content-footer);
 }
 
@@ -374,6 +381,18 @@ font-size: var(--text-size-title-content-footer);
 .footer-block2{
     flex-basis: 60%;
     text-align: right;
+}
+.footer a{
+    color: black;
+    font-weight: bold;
+}
+.footer a:hover{
+    color: white;
+}
+.footer-link a{
+    color: black;
+    font-weight: normal;
+    text-decoration: none;
 }
 
 /* ---hamburger--- */
@@ -429,7 +448,6 @@ label{
 .menu-point {
     line-height: 45px;
     padding: 50px 5px;
-
 }
 .menu-point a{
     color: var(--text);
@@ -443,80 +461,47 @@ label{
     list-style-type: none;
 }
 
-/**
- * Переключаемая боковая панель навигации
- * выдвигающаяся по клику слева
- */
-
 .nav {
-    /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: calc(100vw - 87.5vw);
     min-width: calc(100vw - 87.5vw);
-    /* фиксируем и выставляем высоту панели на максимум */
     height: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
     margin: 0;
-    /* сдвигаем (прячем) панель относительно левого края страницы */
     right: calc(-35vw);
-    /* внутренние отступы */
     padding: 15px 20px;
-    /* плавный переход смещения панели */
     -webkit-transition: right 0.3s;
     -moz-transition: right 0.3s;
     transition: right 0.3s;
-    /* определяем цвет фона панели */
     background: rgba(196, 196, 196, 0.2);
-    backdrop-filter: blur(90px);
-    /* поверх других элементов */
     z-index: 2000;
 }
 
-/**
- * Кнопка переключения панели
- * тег <label>
- */
-
 .nav-toggle {
-    /* абсолютно позиционируем */
-    position: fixed;
-    /* относительно левого края панели */
-    right: 35vw;
-    /* вид курсора */
+    position: absolute;
+    right: 320px;
+    padding: 0.5em;
     cursor: pointer;
-    /* всегда поверх других элементов страницы */
+    font-size: 1.2em;
+    line-height: 1;
     z-index: 2001;
-    /* анимируем цвет текста при наведении */
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out;
 }
-@-moz-document url-prefix() {
-    .nav-toggle{
-        right: 1vw;
-    }
-}
-/**
- * Скрытый чекбокс (флажок)
- * невидим и недоступен :)
- * имя селектора атрибут флажка
- */
 
+/* флажок чек бокса */
 [id='nav-toggle'] {
-    right: 1vw;
+    right: 0;
     position: absolute;
     display: none;
 }
-/**
- * Когда флажок установлен, открывается панель
- * используем псевдокласс:checked
- */
-
 [id='nav-toggle']:checked ~ .nav {
     right: 0;
     box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
     -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
     -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-
 }
 
 
