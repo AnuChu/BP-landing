@@ -508,7 +508,7 @@ label {
     top: 0;
     bottom: 0;
     margin: 0;
-    right: calc(-35vw);
+    right: calc(-45vw);
     padding: 15px 20px;
     -webkit-transition: right 0.3s;
     -moz-transition: right 0.3s;
@@ -666,8 +666,8 @@ label {
     }
 
     .nav {
-        width: calc(100vw - 80vw) !important;
-        min-width: calc(100vw - 80vw) !important;
+        width: calc(100vw - 65vw) !important;
+        min-width: calc(100vw - 65vw) !important;
     }
 
     .nav-toggle {
