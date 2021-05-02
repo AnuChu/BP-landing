@@ -469,6 +469,7 @@ p {
 /* --- menu --- */
 label {
     position: fixed;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .menu {
@@ -515,6 +516,7 @@ label {
     background: rgb(32 32 32 / 93%);
     z-index: 2000;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle {
@@ -529,6 +531,7 @@ label {
     -moz-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* флажок чек бокса */
