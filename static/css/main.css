@@ -12,7 +12,7 @@
     --text-size-title-content: 24px;
     --text-size-content: 20px;
     --text-size-content-info: 20px;
-    --text-sixe-icon: 20px;
+    --text-size-icon: 18px;
     --text-size-content-footer: 20px;
     --text-size-title-content-footer: 20px;
     --text-size-menu: 20px;
@@ -186,7 +186,7 @@ p {
     justify-content: center;
     display: flex;
     padding: 30px;
-    font-size: var(--text-sixe-icon);
+    font-size: var(--text-size-icon);
 }
 
 .buy-block a {
@@ -514,6 +514,7 @@ label {
     transition: right 0.3s;
     background: rgb(32 32 32 / 93%);
     z-index: 2000;
+    user-select: none;
 }
 
 .nav-toggle {
@@ -527,6 +528,7 @@ label {
     -webkit-transition: color .25s ease-in-out;
     -moz-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out;
+    user-select: none;
 }
 
 /* флажок чек бокса */
@@ -541,6 +543,7 @@ label {
     box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    user-select: none;
 }
 
 @media (max-width: 1300px) {
@@ -586,6 +589,9 @@ label {
 @media (max-width: 700px) {
     .main-content_title {
         font-size: 80px;
+    }
+        :root {
+        --text-size-icon: 16px;
     }
 }
 
